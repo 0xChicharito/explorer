@@ -76,7 +76,7 @@ function selected(route: any, nav: NavLink) {
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
           <h1 class="flex-1 ml-3 text-2xl font-semibold dark:text-white">
-            ITRocket
+            ZK Store
           </h1>
         </RouterLink>
         <div
@@ -288,7 +288,7 @@ function selected(route: any, nav: NavLink) {
           {{ $t('module.links') }}
         </div>
         <a
-          href="https://twitter.com/itrocket_team"
+          href="https://twitter.com/0xchicharito"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
@@ -301,7 +301,7 @@ function selected(route: any, nav: NavLink) {
         </a>
         <a
           v-if="showDiscord"
-          href="https://discord.com/invite/CmjYVSr6GW"
+          href="https://discord.com/0xchicharito"
           target="_blank"
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
