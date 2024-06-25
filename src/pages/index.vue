@@ -14,13 +14,34 @@ const dashboard = useDashboard();
 const keywords = ref('');
 const chains = computed(() => {
   if (keywords.value) {
+    const lowercaseKeywords = keywords.value.toLowerCase();
+
     return Object.values(dashboard.chains).filter(
-      (x: ChainConfig) => x.chainName.indexOf(keywords.value) > -1
+      (x: ChainConfig) =>
+        x.chainName.toLowerCase().indexOf(lowercaseKeywords) > -1 ||
+        x.prettyName.toLowerCase().indexOf(lowercaseKeywords) > -1
     );
   } else {
     return Object.values(dashboard.chains);
   }
 });
+
+const featured = computed(() => {
+  const names = [
+    'cosmos',
+    'osmosis',
+    'akash',
+    'celestia',
+    'evmos',
+    'injective',
+    'dydx',
+    'irisnet',
+  ];
+  return chains.value
+    .filter((x) => names.includes(x.chainName))
+    .sort((a, b) => names.indexOf(a.chainName) - names.indexOf(b.chainName));
+});
+
 const chainStore = useBlockchain();
 </script>
 <template>
@@ -28,20 +49,34 @@ const chainStore = useBlockchain();
     <div
       class="flex md:!flex-row flex-col items-center justify-center mb-6 mt-14 gap-2"
     >
-      <h1 class="text-primary dark:invert text-3xl md:!text-6xl font-bold">
+      <h1 class="text-lime-600 dark:invert text-3xl md:!text-6xl font-bold">
         {{ $t('pages.title') }}
       </h1>
     </div>
-    <div class="text-center text-base">
-      <p class="mb-1">
-        {{ $t('pages.slogan') }}
-      </p>
-    </div>
+
     <div
       v-if="dashboard.status !== LoadingStatus.Loaded"
       class="flex justify-center"
     >
       <progress class="progress progress-info w-80 h-1"></progress>
+    </div>
+
+    <div
+      v-if="featured.length > 0"
+      class="text-center text-base mt-6 text-primary"
+    >
+      <h2 class="mb-6">Featured Blockchains 🔥</h2>
+    </div>
+
+    <div
+      v-if="featured.length > 0"
+      class="grid grid-cols-1 gap-4 mt-6 md:!grid-cols-3 lg:!grid-cols-4 2xl:!grid-cols-5"
+    >
+      <ChainSummary
+        v-for="(chain, index) in featured"
+        :key="index"
+        :name="chain.chainName"
+      />
     </div>
 
     <div
@@ -72,6 +107,6 @@ const chainStore = useBlockchain();
 
 <style scoped>
 .logo path {
-  fill: #151a30;
+  fill: #171d30;
 }
 </style>
