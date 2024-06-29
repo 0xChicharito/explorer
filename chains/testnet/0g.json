@@ -5,7 +5,7 @@
     "rpc": ["https://rpc-0g.mflow.tech"],
     "coingecko": "",
     "snapshot_provider": "",
-    "sdk_version": "0.47.1",
+    "sdk_version": "0.47.5",
     "coin_type": "118",
     "min_tx_fee": "500",
     "addr_prefix": "0g",
@@ -16,18 +16,5 @@
         "exponent": "6",
         "coingecko_id": "",
         "logo": "/logos/og.jpg"
-   #"snapshot_provider": "",
-    #"sdk_version": "0.47.5",
-    #"coin_type": "60",
-   # "min_tx_fee": "4000",
-    #"addr_prefix": "evmos",
-    #"logo": "/logos/og.jpg",
-    #"keplr_features": ["eth-address-gen", "eth-key-sign"],
-    #"assets": [{
-       # "base": "aevmos",
-       # "symbol": "EVMOS",
-       # "exponent": "18", 
-       # "coingecko_id": "",
-       # "logo": "/logos/og.jpg"
     }]
 }
