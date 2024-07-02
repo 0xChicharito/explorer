@@ -1,17 +1,25 @@
 {
-  "chain_name": "elys",
-  "api": ["https://elys-testnet-api.itrocket.net"],
-  "rpc": ["https://elys-testnet-rpc.itrocket.net"],
+    "chainId": "berberis-1",
+ "chain_name": "Hedge-Testnet",
+ "api": ["https://hedge-api.validator247.com"],
+ "rpc": ["https://hedge-api.validator247.com"],
   "sdk_version": "0.46.7",
-  "addr_prefix": "elys",
+  "addr_prefix": "Hedge",
   "min_tx_fee": "5000",
-  "logo": "/logos/elys.jpg",
+  "logo": "/logos/hedge.jpg",
   "assets": [
     {
-      "symbol": "ELYS",
-      "base": "uelys",
+      "symbol": "Hedge",
+      "base": "uhedge",
       "exponent": 6,
-      "logo": "/logos/elys.jpg"
-    }
+      "logo": "/logos/hedge.jpg"
+   }
   ]
+}
+
+		"coinMinimalDenom": "uhedge",
+		"coinDecimals": 6,
+		"coinGeckoId": "unknown"
+	},
+	"features": []
 }
