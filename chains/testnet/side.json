@@ -1,17 +1,31 @@
 {
-  "chain_name": "side",
-  "api": ["https://side-testnet-api.itrocket.net"],
-  "rpc": ["https://side-testnet-rpc.itrocket.net"],
-  "sdk_version": "0.47.3",
-  "addr_prefix": "side",
-  "min_tx_fee": "5000",
-  "logo": "/logos/side.jpg",
+  "chain_name": "allora-testnet",
+  "coingecko": "",
+    "api": [
+        {"provider": "allora Network", "address": "https://allora-testnet-rpc.nodesphere.net"}
+    ],
+    "rpc": [
+        {"provider": "allora Network", "address": "https://allora-testnet-api.nodesphere.net"}
+    ],
+  "snapshot_provider": "",
+  "sdk_version": "0.46.10",
+  "coin_type": "118",
+  "min_tx_fee": "3000000000000000",
+  "addr_prefix": "allora",
+  "logo": "/logos/allora.jpg",
+  "keplr_features": [
+    "ibc-transfer",
+    "ibc-go",
+    "eth-address-gen",
+    "eth-key-sign"
+  ],
   "assets": [
     {
-      "symbol": "SIDE",
-      "base": "uside",
-      "exponent": 6,
-      "logo": "/logos/side.jpg"
+      "base": "uallo",
+      "symbol": "ALLO",
+      "exponent": "18",
+      "coingecko_id": "",
+      "logo": "/logos/allora.jpg"
     }
   ]
 }
