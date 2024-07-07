@@ -1,8 +1,8 @@
 {
     "chain_name": "0g",
     "coingecko": "",
-    "api": ["https://0gchain-api.meganode.org"], 
-    "rpc": ["https://rpc-0g.mflow.tech"],
+    "api": ["https://0gchain-api.zkstore.in/"], 
+    "rpc": ["https://0gchain-rpc.zkstore.in/"],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.47.5",
