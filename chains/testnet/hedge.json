@@ -17,9 +17,3 @@
   ]
 }
 
-		"coinMinimalDenom": "uhedge",
-		"coinDecimals": 6,
-		"coinGeckoId": "unknown"
-	},
-	"features": []
-}
